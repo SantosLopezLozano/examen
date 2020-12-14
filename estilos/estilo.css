@@ -1,0 +1,110 @@
+/* esta será la hoja donde se ajuste el estilo de la página */
+
+
+@font-face {
+    font-family: dragonfire;
+    src: url('../tipografias/DragonFire.ttf');
+}
+@font-face {
+    font-family: sanferdinando;
+    src: url('../tipografias/san_frediano_regular.ttf');
+}
+
+/* este será el ancho máximo de todo el contenido de container */
+#container {width:88%;
+    margin:auto;      
+    }
+
+body {background-image:url('../imagenes/tile-sky2.jpg');}
+
+.topnav {
+    font-family: dragonfire;
+}
+/* se ajusta laimagen de la sección hero */
+#hero {
+    background-image:url('../imagenes/dragon1.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 0px;
+    height: 90vh; /* lo que va a ocupar en la pantalla que se visuali */
+    }
+/* se ajusta la posición del título en la imagen */
+#hero h1 {position:absolute;
+        top:84px;
+        right:125px;
+        color:rgb(131, 26, 131);
+        font-family:dragonfire;
+        font-size:2.5em;
+        text-shadow:1px 1px 1px navy;
+        background-color:rgba(255, 255, 255, 0.473);
+        padding:15px;
+        border-radius:5px 30px 5px 30px;
+            }
+
+
+#intro {
+    background-size:auto;
+    background-image:url('../imagenes/tile.jpg');
+    background-position: center;
+    margin-top: 0px; /* no logro hacer que desaparezca el espacio entre la hero y ña intro */
+    padding-bottom: 6%;
+        }
+#intro h2 {
+        text-align: center;
+        color:black;
+        font-family:dragonfire;
+        font-size:2em;
+        padding-top: 6%;
+            }
+#intro p {
+        text-align: left;
+        color:white;
+        font-family:sanferdinando;
+        font-size:1.1em;
+        padding-top: 6%;
+        padding-left: 10%;
+        padding-right: 10%;
+            }
+
+
+
+/* líneas para ajustar el aspecto de las columnas que forman las imagenes de la galería */
+#galeria {
+    background-color: rgb(172, 163, 163);
+}
+.grid4col {display:grid;
+grid-template-columns:auto auto auto auto ;
+}
+.col4 {
+margin:10px;
+transition:0.5s;}
+
+.col4 img {width:100%;
+opacity:0.6;
+transition:1s;}
+.col4 img:hover {opacity:1;}
+
+
+
+/* Ajustes finales para que se adapte a la anchura de la pantalla y lo que más me ha costado aprender del tema */
+@media only screen and (max-width:900px){
+.grid4col {grid-template-columns: 50% 50%;}
+}
+@media only screen and (max-width:600px){
+.grid4col {grid-template-columns: 100%;}
+}
+
+
+/* Ajustes css al footer, pero sin solucionar el problema de que se me separan las secciones y no se porqué */
+#footer {
+    padding: 0.5%;
+    background-size:auto;
+    background-image: url('../imagenes/tile.jpg');
+}
+
+#footer p {
+    padding: 1%;
+    text-align: center;
+    color:black;
+    font-size:0.8em;
+        }
